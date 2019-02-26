@@ -19,13 +19,21 @@ This project has these software pre-requisites to run on Hikey970
   * tensorflow
   * python3
   * python3-pip
+  * git
+  * git-lfs
   * OpenCV on python3
   
 Except for OpenCV on python3 all the other pre-requisites can be installed by running these commands.Tensorflow is already installed in Hikey970 with pre-built Tensorflow.
 
 ```
 $ sudo apt-get update
-$ sudo apt install python3-dev python3-pip
+$ sudo apt install python3-dev python3-pip git
+$ echo 'deb http://http.debian.net/debian stretch-backports main' >> /etc/apt/sources.list
+$ sudo apt update
+$ curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+$ sudo apt-get install git-lfs
+$ git lfs install
+
 ```
 
 Steps for the Gender Recognition Demo:
